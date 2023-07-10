@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      title Natours | #{title}
+  
+  body
+    // HEADER
+    include _header
+    
+    // CONTENT
+    block content
+    //- use "block" to extend templates, to overview or tour
+      
+
+    // FOOTER
+    include _footer
+
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+    script(src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')
+
+
+
+
+
+//-////////////////////////////////////////////////////////////////
+//- html
+//-   head
+//-     title Natours | #{tour}
+//-     //- #{} dynamic syntax used with normal text as using "=" makes everyhing on the right of the = to javascript code 
+//-     link(rel='stylesheet' href='css/style.css')
+//-     link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+//-   body
+//-     h1= tour
+//-     h2= user.toUpperCase()
+//-     //- we can use some javascript in pug
+//-     //- buffered code htmlElement=xxx that will appear in the browser
+//-     - const x = 9
+//-     //- unbuffered code, use "-" and it will appear in the browser
+//-     h2= 2*x
+//-     p This is just some text
+
+//- same as
+//- <html>
+//-   <head>
+//-     <title>Natours</title>
+//-     <link rel="stylesheet" href="css/style.css"/>
+//-   </head>
+//-   <body>
+//-     <h1>tour - from app.js </h1>
+//-     <h2>user - from app.js</h2>
+//-     <p>This is just some text</p>
+//-   </body>
+//- </html>
+
+// line appear in html
+//- line does not appear in the html
